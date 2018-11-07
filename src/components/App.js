@@ -11,6 +11,9 @@ import {
 import Header from './Header';
 import Home from './Home';
 import About from './About';
+import Weather from './Weather';
+import SunMoon from './SunMoon';
+import Lego from './Lego';
 
 // CSS files to import
 import '../css/App.css';
@@ -20,7 +23,10 @@ const App = () => (
     <div className="container">
       <Header />
       <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
+      <Route path="/About" render={ () => <About title='About'/>} />
+      <Route path="/Weather" render={ () => <Weather title='Weather'/>} />
+      <Route path="/SunMoon" render={ () => <SunMoon title='SunMoon'/>} />
+      <Route path="/Lego" render={ () => <Lego title='Lego'/>}/>
     </div>
   </BrowserRouter>
 );
