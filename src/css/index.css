@@ -8,6 +8,31 @@ body {
   font-family: Arial, sans-serif;
 }
 
+h1,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: #404040;
+  font-size: 1.6em;
+  margin-bottom: 1.25em;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #3b80d1;
+}
+hr {
+  border: 0;
+  height: 0;
+  margin: 2.3em 0 2em 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
 
 /* body {
   margin: 0;
@@ -23,6 +48,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 } */
+
+/* ICONS -------- */
+
+.icn-logo {
+  background: #54606b;
+  color: #fff;
+}
+.icn-logo i {
+  font-size: 2.45em;
+  line-height: 0;
+  margin-top: 30px;
+}
+.icn-error {
+  font-size: 3.2em;
+  margin-bottom: .25em;
+}
+
 
 /* ================================= 
   LAYOUT & PAGE STYLES
@@ -53,6 +95,25 @@ header {
   clear: both;
 } */
 
+/* MAIN NAV -------- */
+
+.main-nav a {
+  font-size: .95em;
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 1em;
+  transition: .2s;
+}
+.main-nav a:hover,
+.main-nav .active {
+  color: #fff;
+  background: #3b80d1;
+}
+
+
+
 
 
 /*  Media Queries  */
@@ -62,6 +123,16 @@ header {
     padding-top: 2em;
   }
 
+  .icn-logo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 4px;
+  }
+
+
+
+/* 
   .container {
     width: 95%;
 
@@ -71,9 +142,15 @@ header {
     border-radius: .5em;
     box-shadow: 0 3px rgba(0,0,0, .1);
     overflow: hidden;
+  } */
+
+  .main-nav a {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
   }
-
-
+  .main-nav a:hover {
+    border-color: rgba(0,0,0, .1);
+  }
 
 }
 
@@ -83,7 +160,7 @@ header {
     padding-top: 3em;
   }
 
-  .container {
+  /* .container {
     width: 90%;
     padding-bottom: 2em;
     margin: 0 auto 2em;
@@ -91,5 +168,28 @@ header {
     border-radius: .5em;
     box-shadow: 0 3px rgba(0,0,0, .1);
     overflow: hidden;
+  } */
+
+  .icn-logo {
+    margin-right: auto;
+    padding: 0 2em;
   }
+  
+
+  header,
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-nav a {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    padding: 1.25em 1.5em;
+  }
+  .main-nav a:hover {
+    border-color: rgba(0,0,0, .1);
+  }
+
+
+
 }
