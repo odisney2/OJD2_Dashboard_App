@@ -89,6 +89,17 @@ code {
   overflow: hidden;
 }
 
+.row {
+  float: inline-block; 
+  background: yellow;
+}
+
+.column1, .column2, .column3 {
+  float: right;
+  background: brown;
+  color: white;
+  width: 100px;
+}
 /* .list-item {
   background: greenyellow;
   padding: 2px;
