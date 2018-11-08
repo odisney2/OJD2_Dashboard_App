@@ -4,7 +4,8 @@ import React from 'react';
 
 import {
   BrowserRouter,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 
 // App components
@@ -14,6 +15,7 @@ import About from './About';
 import Weather from './Weather';
 import SunMoon from './SunMoon';
 import Lego from './Lego';
+import NotFound from './NotFound';
 
 // CSS files to import
 import '../css/App.css';
@@ -22,11 +24,15 @@ const App = () => (
   <BrowserRouter>
     <div className="container">
       <Header />
-      <Route exact path="/" component={Home} />
-      <Route path="/About" render={ () => <About title='About'/>} />
-      <Route path="/Weather" render={ () => <Weather title='Weather'/>} />
-      <Route path="/SunMoon" render={ () => <SunMoon title='SunMoon'/>} />
-      <Route path="/Lego" render={ () => <Lego title='Lego'/>}/>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/About" render={ () => <About title='About'/>} />
+        <Route path="/Weather" render={ () => <Weather title='Weather'/>} />
+        <Route path="/SunMoon" render={ () => <SunMoon title='SunMoon'/>} />
+        <Route path="/Lego" render={ () => <Lego title='Lego'/>}/>
+        <Route component={NotFound} />
+      </Switch>
+
     </div>
   </BrowserRouter>
 );

@@ -33,6 +33,14 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
+/* 
+  Will see if we can make this be cool on the link layout later
+  
+.ActiveLinkBackground {
+  background: lightskyblue;
+  color: #FFFFFF;
+} */
+
 
 /* body {
   margin: 0;
@@ -80,6 +88,12 @@ code {
   box-shadow: 0 3px rgba(0,0,0, .1);
   overflow: hidden;
 }
+
+/* .list-item {
+  background: greenyellow;
+  padding: 2px;
+  border-radius: 20px;
+} */
 
 header {
   background: #edeff0;
@@ -147,9 +161,11 @@ header {
   .main-nav a {
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
+    
   }
   .main-nav a:hover {
     border-color: rgba(0,0,0, .1);
+
   }
 
 }
